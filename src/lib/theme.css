@@ -1,0 +1,136 @@
+/* weird/gothic/brutalist display fonts for the compact star's flickering timer */
+
+:root {
+  /* palette */
+  --ink:    #f7f3df;
+  --muted:  #8f948d;
+  --gold:   #e8e65c;
+  --red:    #ff5d73;
+  --violet: #b377ff;
+  --green:  #80ff9f;
+  --teal:   #49f2d0;
+  --blue:   #69a7ff;
+  --rose:   #ff6aa2;
+  --fuchsia:#ff4fc3;
+  --mauve:  #493243;
+  --panel:  #101014;
+  --panel2: #181820;
+  --void:   #07070a;
+  --line:   #1e1e28;
+
+  /* quest kind colors */
+  --kind-main:   var(--gold);
+  --kind-job:    var(--blue);
+  --kind-school: var(--violet);
+  --kind-side:   var(--rose);
+  --kind-ritual: var(--teal);
+
+  /* typography */
+  --font: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  --fs-xs:  10px;
+  --fs-sm:  11px;
+  --fs-md:  12px;
+  --fs-lg:  14px;
+  --lh:     1.5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs-md);
+  line-height: var(--lh);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--mauve);
+  border-radius: 2px;
+}
+
+button {
+  font-family: var(--font);
+  font-size: var(--fs-sm);
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.1s;
+}
+button:hover {
+  color: var(--ink);
+}
+
+input, textarea, select {
+  font-family: var(--font);
+  font-size: var(--fs-sm);
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 4px 6px;
+  outline: none;
+  width: 100%;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--gold);
+}
+
+textarea {
+  resize: none;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.muted { color: var(--muted); }
+.gold  { color: var(--gold); }
+.red   { color: var(--red); }
+.teal  { color: var(--teal); }
+.violet{ color: var(--violet); }
+
+.kind-main   { color: var(--kind-main); }
+.kind-job    { color: var(--kind-job); }
+.kind-school { color: var(--kind-school); }
+.kind-side   { color: var(--kind-side); }
+.kind-ritual { color: var(--kind-ritual); }
+
+.btn {
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.05em;
+}
+.btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn-gold {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--void);
+}
